@@ -5,10 +5,10 @@ const CoinSelector = (props) => (
         <div className='row'>
             <div className='col-md-12'>
                 <div className='btn-group' dropdown>
-                    <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>
-                        Coins <span class="caret"></span>
+                    <button type="button" className="btn btn-primary dropdown-toggle" data-toggle='dropdown'>
+                        Coins <span className="caret"></span>
                     </button>
-                    <ul class="dropdown-menu" role="menu">
+                    <ul className="dropdown-menu" role="menu">
                         <li>
                             <a>Coin Symbol</a>
                         </li>
@@ -21,17 +21,23 @@ const CoinSelector = (props) => (
                         <label>{props.label}</label>
                         <input type="text"  className="form-control" />
                     </div>
+                    {
+                    props.direction === 'out' &&
                     <div  className="">
                         <label>Amount</label>
                         <input type="text"  className="form-control" />
                     </div>
+                    }
                 </div>
+                {
+                props.direction === 'in' &&
                 <div className="">
                     <div>Deposit Limit: 4.900$ </div>
                     <div>Minimum Amount: 15</div>
                     <div>MinerFee: 0.001</div>
                     <div>Rate: 00 </div>
                 </div>
+                }
             </div>
         </div>
     </div>

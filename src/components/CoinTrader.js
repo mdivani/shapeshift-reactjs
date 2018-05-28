@@ -7,9 +7,11 @@ const CoinTrader = () => (
         <div className='row'>
             <CoinSelector
               label='Return Address'
+              direction='in'
              />
             <CoinSelector
               label='Withdrawal Address'
+              direction='out'
              />
         </div>
         <ShiftButton />
