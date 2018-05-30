@@ -1,11 +1,12 @@
 import React from 'react';
+import InputAddress from './InputAddress';
 
 const CoinSelector = (props) => (
     <div className='col-md-5'>
         <div className='row'>
             <div className='col-md-12'>
                 <div className='btn-group' dropdown>
-                    <button type="button" className="btn btn-primary dropdown-toggle" data-toggle='dropdown'>
+                    <button type="button" className="btn btn-primary dropdown-toggle">
                         Coins <span className="caret"></span>
                     </button>
                     <ul className="dropdown-menu" role="menu">
@@ -17,16 +18,13 @@ const CoinSelector = (props) => (
             </div>
             <div className="col-md-12">
                 <div className="form-group">
-                    <div>
-                        <label>{props.label}</label>
-                        <input type="text"  className="form-control" />
-                    </div>
+                    <InputAddress 
+                     className='form-control'
+                     type='text'
+                     label={props.label}
+                     />
                     {
-                    props.direction === 'out' &&
-                    <div  className="">
-                        <label>Amount</label>
-                        <input type="text"  className="form-control" />
-                    </div>
+                    props.direction === 'out' && <InputAddress className='form-control' type='text' label='amount' />
                     }
                 </div>
                 {

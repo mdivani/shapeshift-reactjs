@@ -11,7 +11,10 @@
     "react": "^16.4.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4"
+    "react-modal": "^3.4.4",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
@@ -26,4 +29,3 @@
     "deploy": "gh-pages -d build"
   }
 }
-
